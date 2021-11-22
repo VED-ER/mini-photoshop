@@ -1,6 +1,6 @@
 # Google-calendar-clone
 
-A mini photoshop clone which uses css filter to edit an image.
+One of my favourites. A mini photoshop clone which uses css filter to edit an image.
 
 Live Site URL: [mini-photoshop](https://photoshop-clone-e4b49.web.app/)
 
