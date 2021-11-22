@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+*,*::after,*::before{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  margin: 0;
+}
+
+.container{
+  border: 1px solid #dddddd;
+  max-width: 1700px;
+  height: 80vh;
+  padding: 1rem;
+  border-radius: .5rem;
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: 
+  "image sidebar"
+  "slider sidebar";
+}
+
+.sidebar{
+  grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.main-img{
+  /* background-image: url('./wolfgang-pic.jpg');  */
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  grid-area: image;
+  min-width: 700px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider{
+  grid-area: slider;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 85%;
+  cursor: pointer;
 }
+
+.sidebar-item{
+  padding: .5rem 1rem;
+  border: 1px solid #dddddd;
+  border-radius: .5rem;
+  background-color: transparent;
+  transition: background-color 250ms;
+  margin-bottom: .5rem;
+}
+
+.sidebar-item.active{
+  background-color: gray;
+  color: #fff;
+}
+
+.sidebar-item:hover{
+  background-color:lightgray;
+}
+
+input[type='file'] { font-size: 0; }
+::file-selector-button { font-size: initial; }
+
